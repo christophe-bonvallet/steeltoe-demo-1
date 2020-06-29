@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  
   <ItemGroup>
     <PackageReference Include="GitInfo" Version="2.0.26">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -14,8 +15,13 @@
     <PackageReference Include="Steeltoe.extensions.logging.dynamiclogger" Version="2.4.4" />
     <PackageReference Include="Steeltoe.management.cloudFoundryCore" Version="2.4.4" />
   </ItemGroup>
-
   
+  <ItemGroup>
+    <None Include="git.properties">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
   <Target Name="_GitProperties" AfterTargets="CoreCompile">
     <WriteLinesToFile File="git.properties" Lines="git.remote.origin.url=$(GitRoot)" Overwrite="true" />
     <WriteLinesToFile File="git.properties" Lines="git.build.version=$(GitBaseVersion)" Overwrite="false" />
