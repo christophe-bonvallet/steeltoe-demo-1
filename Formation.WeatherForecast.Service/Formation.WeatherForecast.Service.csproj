@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitInfo" Version="2.0.26">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Steeltoe.common.hosting" Version="2.4.4" />
+    <PackageReference Include="Steeltoe.extensions.configuration.cloudfoundrycore" Version="2.4.4" />
+    <PackageReference Include="Steeltoe.extensions.logging.dynamiclogger" Version="2.4.4" />
+    <PackageReference Include="Steeltoe.management.cloudFoundryCore" Version="2.4.4" />
+  </ItemGroup>
+
+
+</Project>
