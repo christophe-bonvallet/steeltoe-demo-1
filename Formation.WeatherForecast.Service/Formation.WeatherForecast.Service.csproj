@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   
+  <!-- SWAGGER Auto Generate Documentation -->
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591;0579</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="GitInfo" Version="2.0.26">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -14,6 +20,9 @@
     <PackageReference Include="Steeltoe.extensions.configuration.cloudfoundrycore" Version="2.4.4" />
     <PackageReference Include="Steeltoe.extensions.logging.dynamiclogger" Version="2.4.4" />
     <PackageReference Include="Steeltoe.management.cloudFoundryCore" Version="2.4.4" />
+    <PackageReference Include="Swashbuckle.aspnetCore" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Redoc" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
   </ItemGroup>
   
   <ItemGroup>

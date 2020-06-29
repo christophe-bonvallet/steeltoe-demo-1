@@ -22,7 +22,11 @@ namespace Formation.WeatherForecast.Service.Controllers
         {
             _logger = logger;
         }
-
+        
+        /// <summary>
+        /// I wanna to get the blabla
+        /// </summary>
+        /// <returns>it's beautifull</returns>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
